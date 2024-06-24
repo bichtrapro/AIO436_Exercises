@@ -19,14 +19,19 @@ class MyStack:
     def pop(self):
         if self.is_empty():
             raise IndexError("Stack is empty")
-        self.__stack.pop()
+        return self.__stack.pop()
     #lay phan tu tren cung
     def top(self):
         if self.is_empty():
             return "Stack is empty"
+        return self.__stack[-1]
 if __name__ == "__main__":
-    mystack = MyStack(3)
-    print(mystack.is_empty())
+    mystack = MyStack(5)
     mystack.push(1)
     mystack.push(2)
-    mystack.pop()
+    print(mystack.is_full())
+    print(mystack.top())
+    print(mystack.pop())
+    print(mystack.top())
+    print(mystack.pop())
+    print(mystack.is_empty())

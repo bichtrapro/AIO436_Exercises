@@ -17,7 +17,7 @@ class MyQueue:
     def dequeue(self):
         if self.is_empty():
             raise IndexError("Queue is empty")
-        self.__queue.pop(0)
+        return self.__queue.pop(0)
     def front(self):
         if self.is_empty():
             raise IndexError("Queue is empty")
@@ -27,5 +27,11 @@ class MyQueue:
 myqueue = MyQueue(5)
 myqueue.enqueue(1)
 myqueue.enqueue(2)
+print(myqueue.is_full())
+
 
 print(myqueue.front())
+print(myqueue.dequeue())
+print(myqueue.front())
+print(myqueue.dequeue())
+print(myqueue.is_empty())
